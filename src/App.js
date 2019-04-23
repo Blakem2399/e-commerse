@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import {Switch,Route} from "react-router-dom";
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Navbar from './components/Navbar'
@@ -14,7 +13,7 @@ class App extends Component {
   render() {
     return (
         <React.Fragment>
-            <Navbar></Navbar>
+            <Navbar/>
             <Switch>
                 <Route exact path='/' component={ProductList}/>
                 <Route path='/details' component={Details} />
