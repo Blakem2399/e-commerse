@@ -1,8 +1,8 @@
 :root{
-  --mainBlue:#2a2a72;
-  --lightBlue:#009ffd;
-  --mainWhite:#f3f3f3;
-  --mainDark:#232528;
+  --mainTan:#9E936C;
+  --lightTan:#DAD2BC;
+  --mainWhite:#F5F1ED;
+  --mainDark:#252323;
   --mainYellow:#ffa400
 }
 
@@ -17,10 +17,10 @@ body{
   text-transform: uppercase;
 }
 .mainText{
-  color: var(--mainBlue);
+  color: var(--mainTan);
 
 }
 .brightText{
-  color: var(--lightBlue);
+  color: var(--lightTan);
 
 }

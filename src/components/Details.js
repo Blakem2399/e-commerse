@@ -32,7 +32,7 @@ class Details extends Component {
                                 </p>
                                     <div>
                                         <Link to='/'>
-                                            <ButtonContainer>All Comics</ButtonContainer>
+                                            <ButtonContainer dark>All Comics</ButtonContainer>
                                         </Link>
                                         <ButtonContainer cart disabled={!!inCart} onClick={()=> value.addToCart(id)}>
                                             {inCart ? 'In Cart': 'add to cart'}

@@ -33,7 +33,7 @@ class Product extends Component {
                         <p className="align-self-center mb-0">
                             {title}
                         </p>
-                        <h5 className="text-blue font-italic mb-0">
+                        <h5 className="mainText font-italic mb-0">
                             $<span className="mr-1">{price}</span>
                         </h5>
                     </div>
@@ -63,7 +63,6 @@ const UnstyledProductWrapper = ({className, children}) => (
 export default Product;
 
 const ProductWrapper = styled(UnstyledProductWrapper)`
-background-color: white;
 .card{
 border-color:transparent;
 transition: all 1s linear;
@@ -91,6 +90,28 @@ transition: all 1s linear;
 }
  .img-container:hover .card-img-top{
 transform: scale(1.2);
+
+}
+.cart-btn{
+position:absolute;
+top: 0;
+right: 0;
+padding: 0.2rem 0.4rem;
+background: var(--mainTan);
+border:none;
+color: var(--mainWhite);
+font-size: 1.4rem;
+border-radius: 0 0 0 0.5rem;
+transition: all 1s linear;
+transform:translate(100%,-100%) ;
+}
+.img-container:hover .cart-btn{
+transform: translate(0,0);
+}
+.cart-btn:hover{
+color:var(--mainDark);
+cursor: pointer;
+
 }
 
 `;
