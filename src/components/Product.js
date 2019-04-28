@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
-
 import {Link} from 'react-router-dom'
 import {ProductConsumer} from "../context";
 import styled from "styled-components";
+import PropTypes from 'prop-types'
 
 
 class Product extends Component {
@@ -41,6 +41,16 @@ class Product extends Component {
     }
 }
 
+Product.propTypes = {
+    product:PropTypes.shape({
+        id:PropTypes.number,
+        img:PropTypes.string,
+        title:PropTypes.string,
+        price:PropTypes.number,
+        inCart:PropTypes.bool
+    }).isRequired
+};
+
 const UnstyledProductWrapper = ({ className, children } ) => (
     <div className={className}>
         {children}
@@ -50,7 +60,7 @@ const UnstyledProductWrapper = ({ className, children } ) => (
 export default Product;
 
 const ProductWrapper = styled(UnstyledProductWrapper)`
-
+background-color: white;
 .card{
 border-color:transparent;
 transition: all 1s linear;
@@ -69,14 +79,14 @@ box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
 background: rgba(247,247,247);
 }
 }
-.img-container{
+ .img-container{
 position: relative;
 overflow: hidden;
 }
-.card-img-top{
+ .card-img-top{
 transition: all 1s linear;
 }
-.img-container:hover .card-img-top{
+ .img-container:hover .card-img-top{
 transform: scale(1.2);
 }
 
