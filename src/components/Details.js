@@ -7,7 +7,7 @@ class Details extends Component {
     render() {
         return (
             <ProductConsumer>
-                {(value)=>{
+                {value =>{
                     const {id,author,img,info,price,title,inCart} = value.detailProduct;
                     return (
                         <div className="container py-5">
@@ -34,7 +34,7 @@ class Details extends Component {
                                         <Link to='/'>
                                             <ButtonContainer>All Comics</ButtonContainer>
                                         </Link>
-                                        <ButtonContainer disabled={!!inCart}>
+                                        <ButtonContainer disabled={!!inCart} onClick={()=> value.addToCart(id)}>
                                             {inCart ? 'In Cart': 'add to cart'}
                                         </ButtonContainer>
                                     </div>
