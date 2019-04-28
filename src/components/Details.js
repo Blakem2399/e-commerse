@@ -13,7 +13,7 @@ class Details extends Component {
                         <div className="container py-5">
 
                             <div className="row">
-                                <div className="col-10 mx-auto text-center my-5 mainText">
+                                <div className="col-10 mx-auto text-center my-5 mainText title">
                                     <h1>{title}</h1>
                                 </div>
                             </div>

@@ -11,22 +11,24 @@ class Product extends Component {
         return (
             <ProductWrapper className="col-9 col-md-6 col-lg-3 my-3">
                 <div className="card">
-                    <div className="img-container p-5" onClick={() => console.log('clicked on image')}>
-                        <Link to='/details'>
-                            <img src={img} alt="product" className="card-img-top"/>
-                        </Link>
-                        <button className="cart-btn" disabled={!!inCart} onClick={() => {
-                            console.log('added to cart');
-                        }}>{inCart ? (
-                            <p className="text-capitalize mb-0" disabled>
-                                {' '}
-                                in Cart
-                            </p>
-                        ) : (
-                            <i className="fas fa-cart-plus"></i>
-                        )}</button>
-
-                    </div>
+                    <ProductConsumer>
+                        {(value) => (
+                            <div className="img-container p-5" onClick={() => value.handleDetail(id)}>
+                                <Link to='/details'>
+                                    <img src={img} alt="product" className="card-img-top"/>
+                                </Link>
+                                <button className="cart-btn" disabled={!!inCart} onClick={() => {
+                                    value.addToCart(id);
+                                }}>{inCart ? (
+                                    <p className="text-capitalize mb-0" disabled>
+                                        {' '}
+                                        in Cart
+                                    </p>
+                                ) : (
+                                    <i className="fas fa-cart-plus"></i>
+                                )}</button>
+                            </div>)}
+                    </ProductConsumer>
                     <div className="card-footer d-flex justify-content-between">
                         <p className="align-self-center mb-0">
                             {title}
@@ -35,6 +37,7 @@ class Product extends Component {
                             $<span className="mr-1">{price}</span>
                         </h5>
                     </div>
+
                 </div>
             </ProductWrapper>
         );
@@ -42,16 +45,16 @@ class Product extends Component {
 }
 
 Product.propTypes = {
-    product:PropTypes.shape({
-        id:PropTypes.number,
-        img:PropTypes.string,
-        title:PropTypes.string,
-        price:PropTypes.number,
-        inCart:PropTypes.bool
+    product: PropTypes.shape({
+        id: PropTypes.number,
+        img: PropTypes.string,
+        title: PropTypes.string,
+        price: PropTypes.number,
+        inCart: PropTypes.bool
     }).isRequired
 };
 
-const UnstyledProductWrapper = ({ className, children } ) => (
+const UnstyledProductWrapper = ({className, children}) => (
     <div className={className}>
         {children}
     </div>
