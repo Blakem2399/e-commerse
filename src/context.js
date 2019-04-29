@@ -60,7 +60,7 @@ class ProductProvider extends Component {
         console.log('remove')
     };
     removeAll = (id)=>{
-        console.log('clear cart')
+        console.log('clear Cart')
     };
 
     render() {
