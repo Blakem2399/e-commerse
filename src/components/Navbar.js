@@ -23,12 +23,12 @@ class Navbar extends Component {
 
                         <span><i className='fas fa-cart-plus'/></span> my cart
                         <ProductConsumer>
-                        {value =>{
-                            const {cart} = value;
-                            if (cart.length > 0){
-                                return <span> ({cart.length})</span>
-                            }
-                        }}</ProductConsumer>
+                            {value => {
+                                const {cart} = value;
+                                if (cart.length > 0) {
+                                    return <span> ({cart.length})</span>
+                                }
+                            }}</ProductConsumer>
                     </ButtonContainer>
 
                 </Link>

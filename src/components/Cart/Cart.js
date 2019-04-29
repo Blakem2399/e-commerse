@@ -16,8 +16,8 @@ class Cart extends Component {
                             <React.Fragment>
                                 <Title name='View' title='Cart'/>
                                 <CartColumns/>
-                                <CartList value ={value}/>
-                                <CartTotals value = {value}/>
+                                <CartList value={value}/>
+                                <CartTotals value={value}/>
                             </React.Fragment>
                         )
 

@@ -7,8 +7,8 @@ class Details extends Component {
     render() {
         return (
             <ProductConsumer>
-                {value =>{
-                    const {id,author,img,info,price,title,inCart} = value.detailProduct;
+                {value => {
+                    const {id, author, img, info, price, title, inCart} = value.detailProduct;
                     return (
                         <div className="container py-5">
 
@@ -28,14 +28,14 @@ class Details extends Component {
                                     <p className="text-capitalize font-weight-bold mt-3 mb-0">
                                         comic description:</p>
                                     <p className="text-muted lead">
-                                    {info}
-                                </p>
+                                        {info}
+                                    </p>
                                     <div>
                                         <Link to='/'>
                                             <ButtonContainer dark>All Comics</ButtonContainer>
                                         </Link>
-                                        <ButtonContainer cart disabled={!!inCart} onClick={()=> value.addToCart(id)}>
-                                            {inCart ? 'In Cart': 'add to cart'}
+                                        <ButtonContainer cart disabled={!!inCart} onClick={() => value.addToCart(id)}>
+                                            {inCart ? 'In Cart' : 'add to cart'}
                                         </ButtonContainer>
                                     </div>
                                 </div>
