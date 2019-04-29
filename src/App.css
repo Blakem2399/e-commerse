@@ -1,0 +1,46 @@
+:root{
+  --mainTan:#9E936C;
+  --lightTan:#DAD2BC;
+  --mainWhite:#F5F1ED;
+  --mainDark:#252323;
+  --mainYellow:#ffa400;
+  --mainRed:#960806;
+}
+
+body{
+  font-family: 'Roboto', sans-serif !important;
+  background: var(--mainWhite) !important;
+  color: var(--mainDark) !important;
+}
+.title{
+  font-family: 'Permanent Marker', cursive;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+.mainText{
+  color: var(--mainTan);
+
+}
+.brightText{
+  color: var(--lightTan);
+
+}
+.btn-block{
+  background: transparent;
+  text-transform: capitalize;
+  font-size: 0.8rem !important;
+  color: var(--mainDark);
+  border-radius: 1rem!important;
+  border:0.1rem solid var(--mainDark);
+  transition: all .5s linear;
+}
+.btn-block:hover{
+  background: var(--mainDark);
+  color: var(--lightTan);
+  cursor: pointer;
+}
+.trash-icon{
+  cursor: pointer;
+  font-size: 1.2rem;
+  color:var(--mainRed);
+}
