@@ -10,6 +10,7 @@ class ProductProvider extends Component {
         cart:[],
         cartSubTotal:0,
         cartTax:0.6,
+        cartTotal:0
 
     };
     componentDidMount() {
@@ -48,13 +49,30 @@ class ProductProvider extends Component {
             return{products:tempProducts, cart:[...this.state.cart,product]};
         },()=>{console.log(this.state)});
     };
+    increment = (id)=>{
+
+        console.log("increment")
+    };
+    decrement = (id)=>{
+        console.log('decrement')
+    };
+    removeItem = (id)=>{
+        console.log('remove')
+    };
+    removeAll = (id)=>{
+        console.log('clear cart')
+    };
 
     render() {
         return (
             <ProductContext.Provider value={{
                 ...this.state,
                 handleDetail: this.handleDetail,
-                addToCart: this.addToCart
+                addToCart: this.addToCart,
+                increment:this.increment,
+                decrement:this.decrement,
+                removeItem:this.removeItem,
+                removeAll:this.removeAll,
             }}>
                 {this.props.children}
             </ProductContext.Provider>
