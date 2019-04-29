@@ -2,7 +2,7 @@
   "name": "e-commerse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "spades-ecommerce-site.netlify.com",
+  "homepage": "https://spades-ecommerce-site.netlify.com",
   "dependencies": {
     "@bootstrap-styled/provider": "^1.4.2",
     "@bootstrap-styled/v4": "^3.0.13",
