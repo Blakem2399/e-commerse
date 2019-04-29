@@ -2,7 +2,7 @@
   "name": "e-commerse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Blakem2399/e-commerse",
+  "homepage": "https://blakem2399.github.io/e-commerse/",
   "dependencies": {
     "@bootstrap-styled/provider": "^1.4.2",
     "@bootstrap-styled/v4": "^3.0.13",
