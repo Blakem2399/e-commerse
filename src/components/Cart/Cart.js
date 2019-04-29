@@ -3,6 +3,7 @@ import Title from '../Title'
 import CartColumns from './CartColumns'
 import {ProductConsumer} from "../../context";
 import CartList from './CartList'
+import CartTotals from './CartTotals'
 
 class Cart extends Component {
     render() {
@@ -16,6 +17,7 @@ class Cart extends Component {
                                 <Title name='View' title='Cart'/>
                                 <CartColumns/>
                                 <CartList value ={value}/>
+                                <CartTotals value = {value}/>
                             </React.Fragment>
                         )
 
