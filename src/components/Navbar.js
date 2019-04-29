@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import logo from '../logo.svg'
 import styled from 'styled-components'
 import {ButtonContainer} from "./Button";
+import {ProductConsumer} from "../context";
 
 class Navbar extends Component {
     render() {
@@ -18,8 +19,18 @@ class Navbar extends Component {
 
                 <Link to='/cart' className='ml-auto'>
                     <ButtonContainer>
+
+
                         <span><i className='fas fa-cart-plus'/></span> my cart
+                        <ProductConsumer>
+                        {value =>{
+                            const {cart} = value;
+                            if (cart.length > 0){
+                                return <span> ({cart.length})</span>
+                            }
+                        }}</ProductConsumer>
                     </ButtonContainer>
+
                 </Link>
             </NavWrapper>
         );
